@@ -2,7 +2,7 @@
 <img src="https://anonymous.4open.science/r/biomQuants-EDEF/assets/biomQuants_Logo.png" width="300" alt="" height="300"/>
 </p>
 
-# $\texttt{biomQuants}$: A Systematic, Multifaceted, and Open-Source Framework for Biometric Quantification
+# $\texttt{biomQuant}$: A Systematic, Multifaceted, and Open-Source Framework for Biometric Quantification
 
 <p align="center">
 <a><img src="https://img.shields.io/badge/python-3.9+-blue"></a>
