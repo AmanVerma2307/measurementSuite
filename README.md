@@ -2,7 +2,7 @@
 <img src="https://anonymous.4open.science/r/biomQuants-EDEF/assets/biomQuants_Logo.png" width="300" alt="" height="300"/>
 </p>
 
-# $\texttt{biomQuants}$: A Systematic, Multifaceted, and Open-Source Framework for Biometric Quantification
+## $\texttt{biomQuants}$: A Systematic, Multifaceted, and Open-Source Framework for Biometric Quantification
 
 <p align="center">
 <a><img src="https://img.shields.io/badge/python-3.9+-blue"></a>
@@ -19,7 +19,7 @@ These are combined using appropriate weights and result in the advanced acceptan
 Across $13$ biometric quantification scenarios spanning gesture, action, mobile activity, and sensor selection, $5$ biometric quantification frameworks, and $9$ state-of-the-art (SOTA) models, $A_r^*$ consistently favors scores that better satisfy the four criteria jointly. In intra-framework analysis, we show that $A_r^*$ prefers more holistic scores in $39$ out of $53$ scenarios, with $5$ additional near-optimal cases, and $17$ distinct selections from other measures. We also conduct extensive ablations to support the reliability, non-redundancy, stability, and sensitivity of the proposed measure. We release a Python package, biomQuants, comprising the proposed measure and other biometric quantification frameworks.
 
 ## News
-* We have released our code, results, and made test-set embeddings public.
+* We have released our code and results, and have made test-set embeddings public.
 
 ## Repository
 > We release code, evaluation measures, testing and analysis code, and extracted embeddings for reproducibility.
