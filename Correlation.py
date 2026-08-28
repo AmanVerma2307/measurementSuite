@@ -212,3 +212,4 @@ if(args.mode == 'full'):
     pyCompare.blandAltman(df[args.measure1].values[:],
                               df[args.measure2].values[:],
                              savePath='./_store/_graphs/_blandAltman/'+args.baPath+'.png')
+
