@@ -1,0 +1,4 @@
+Quantifier      Metric      top1      top3      top5
+dgbqa      R      4.74      5.17      6.048
+dgbqa      Ar*      4.74      5.17      6.158
+dgbqa      U      4.74      5.17      6.252
