@@ -5,6 +5,7 @@ from src.quantifiers import *
 from utils.selector import get_val, select_model
 from utils.retList import *
 from utils.sensorSimulator import *
+from utils.topK import *
 
 ###### Selecting model embeddings
 parser = argparse.ArgumentParser()
@@ -463,6 +464,58 @@ if(args.mode == 'sensorSimulator'):
                 resultFile.write(str(item)+'      ')
             else:
                 resultFile.write(str(item)+'\n')
-        
 
+if(args.mode == 'topK'):
+
+    scoreVec = getScores(select_model(embedding_list,
+                                      dataset_list,
+                                      args.metric,
+                                      quantifier=args.quantifier),
+                         args.quantifier,
+                         y_dev,
+                         y_dev_id,
+                         G_total,
+                         I_total,
+                         normalize=normalize)
+
+    if(args.dataset in ['soli','tiny','scut','ntu_60']):
+        top1, top3, top5 = selectTopK(eerVec=eer_values,
+                                      scoreVec=scoreVec)
+    else:
+        top1, top3 = selectTopK(eerVec=eer_values,
+                                scoreVec=scoreVec)
+        top5 = None
+    
+    labels = ['Quantifier',
+              'Metric',
+              'top1',
+              'top3',
+              'top5']
+    entries = [args.quantifier,
+               args.metric,
+               top1,
+               top3,
+               top5]
+
+    if(args.initResultFile == 1):
+        resultFile = open('./_store/_topKFiles/'+args.nameResultFile+'.txt','w')
+        for idx, item in enumerate(labels):
+            if(idx in [0,1,2,3]):
+                resultFile.write(str(item)+'      ')
+            else:
+                resultFile.write(str(item)+'\n')
+
+        for idx, item in enumerate(entries):
+            if(idx in [0,1,2,3]):
+                resultFile.write(str(item)+'      ')
+            else:
+                resultFile.write(str(item)+'\n')
+        
+    if(args.initResultFile == 0):
+        resultFile = open('./_store/_topKFiles/'+args.nameResultFile+'.txt','a')
+        for idx, item in enumerate(entries):
+            if(idx in [0,1,2,3]):
+                resultFile.write(str(item)+'      ')
+            else:
+                resultFile.write(str(item)+'\n')
     
