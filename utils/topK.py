@@ -29,4 +29,3 @@ def selectTopK(eerVec,
         return np.round(topKlist[0],4), np.round(np.average(topKlist[0:3]),4), np.round(np.average(topKlist[0:5]),4)
     else:
         return np.round(topKlist[0],4), np.round(np.average(topKlist[0:3]),4)
-
